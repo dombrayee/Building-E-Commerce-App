@@ -3,8 +3,9 @@ const booksWrapper = document.querySelector(".books");
 
 const books = getBooks();
 
- const bookHTML = books.map((book) => {
-return `<div class="book">
+ const booksHtml = books
+ .map((book) => {
+ return `<div class="book">
     <figure class="book__img--wrapper">
       <img class="book__img" src="${book.url}" alt="">
     </figure>
@@ -19,23 +20,23 @@ return `<div class="book">
       <i class="fas fa-star-half-alt"></i>
     </div>
     <div class="book__price">
-      <span class="book__price--normal">$${book.originalPrice}</span> $${books[0].salePrice} 
+      <span>$${book.originalPrice.toFixed(2)}</span>
     </div>
-  </div>` 
+  </div>`; 
 })
 .join("");
 
-console.log(bookHTML);
 
-booksWrapper.innerHTML = bookHTML;
-//booksWrapper.innerHTML = ;
+booksWrapper.innerHTML = booksHtml;
 }
 
+function filterBooks(event) {
+  console.log('event')
+}
 
 setTimeout(() => {
   renderBooks();
 });
-renderBooks();
 // FAKE DATA
 function getBooks() {
   return [
