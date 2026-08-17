@@ -22,13 +22,8 @@ function renderBooks() {
     <span>$${book.originalPrice.toFixed(2)}</span>
   </div>
   </div>`; 
-
-
 })
-
 .join("");
-
-console.log(booksHtml);
 
 booksWrapper.innerHTML = booksHtml;
 }
