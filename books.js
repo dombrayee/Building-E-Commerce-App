@@ -2,7 +2,6 @@ function renderBooks() {
   const booksWrapper = document.querySelector(".books");
 
   const books = getBooks();
-
  const booksHtml = books.map((book) => {
  return `<div class="book">
   <figure class="book__img--wrapper">
@@ -29,7 +28,7 @@ booksWrapper.innerHTML = booksHtml;
 }
 
 function filterBooks(event) {
-  console.log(event);
+  console.log(event.target.value);
 }
 
 
