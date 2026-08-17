@@ -26,7 +26,6 @@ const books = getBooks();
 })
 .join("");
 
-
 booksWrapper.innerHTML = booksHtml;
 }
 
