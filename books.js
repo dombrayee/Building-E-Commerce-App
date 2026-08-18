@@ -55,7 +55,7 @@ function filterBooks(event) {
 
  /* renderBooks(books);*/
 
- renderBooks(getBooks());
+ renderBooks(books);
 }
 
 /*function filterBooks(event) {
@@ -65,10 +65,10 @@ function filterBooks(event) {
 
 
 setTimeout(() => {
-  renderBooks();
+  renderBooks(getBooks());
 });
 // FAKE DATA
-renderBooks();
+renderBooks(getBooks());
 function getBooks() {
   return [
     {
