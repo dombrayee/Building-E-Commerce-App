@@ -59,6 +59,8 @@ function filterBooks(event) {
     books.sort((a, b) => b.rating - a.rating);
   }
 
+  console.log(event.target.value);
+  console.table(books);
   renderBooks(books);
 
  
@@ -74,7 +76,6 @@ setTimeout(() => {
   renderBooks(getBooks());
 });
 // FAKE DATA
-renderBooks(getBooks());
 function getBooks() {
   return [
     {
