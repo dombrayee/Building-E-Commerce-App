@@ -21,7 +21,13 @@
     <i class="fas fa-star-half-alt"></i>
   </div>
   <div class="book__price">
-    <span>$${book.originalPrice.toFixed(2)}</span>
+   ${
+  book.salePrice
+    ? `<span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span>
+       $${book.salePrice.toFixed(2)}`
+    : `$${book.originalPrice.toFixed(2)}`
+}
+
   </div>
   </div>`; 
 })
@@ -53,9 +59,9 @@ function filterBooks(event) {
     books.sort((a, b) => b.rating - a.rating);
   }
 
- /* renderBooks(books);*/
+  renderBooks(books);
 
- renderBooks(getBooks());
+ 
 }
 
 /*function filterBooks(event) {
