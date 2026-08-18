@@ -55,7 +55,7 @@ function filterBooks(event) {
 
  /* renderBooks(books);*/
 
- renderBooks(books);
+ renderBooks(getBooks());
 }
 
 /*function filterBooks(event) {
